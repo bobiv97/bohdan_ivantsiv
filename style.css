@@ -59,6 +59,7 @@ a {
 	pointer-events: none;
 	margin-left: 0rem;
 	margin-top: 0;
+	margin-bottom: -4rem;
 	visibility: visible;
 	transform: translate3d(0px, -13.0922px, 0px);
 }
@@ -67,8 +68,8 @@ a {
 	width: 50rem;
 	height: 17rem;
 	position: relative;
-	margin-left: 40rem;
-	margin-top: 9rem;
+	margin: auto;
+	top: 25%;
 	box-shadow: 0 0 5px 0.1px white;
 	opacity: 0.7;
 	filter: alpha(Opacity=70);
@@ -127,7 +128,7 @@ a {
 .wrapper {
 	background: #151515;
 	height: 7rem;
-	max-width: 135rem;
+	max-width: 100%;
 	margin: 0 auto;
 	padding: 0 0.1rem;
 }
@@ -164,9 +165,6 @@ article p {
 	font-size: 2rem;
 	max-width: 20rem;
 }
-section {
-
-}
 section p {
 	text-align: center;
 	font-size: 1.4rem;
@@ -174,7 +172,6 @@ section p {
 	padding-top: 2rem;
 	color: #151515;
 }
-
 form {
 	margin-left: 30rem;
 }
@@ -244,9 +241,30 @@ footer h4{
 	font-size: 1.4rem;
 	color: grey;
 }
-
-
-
+.fitphoto {
+	display: flex;
+	justify-content: space-between;
+	margin: 4rem 5rem 0 5rem;
+}
+.fitphoto1 {
+	display: flex;
+	justify-content: space-between;
+	margin: 4rem 5rem 0 5rem;
+}
+.fitphoto2 {
+	display: flex;
+	justify-content: space-between;
+	margin: 4rem 5rem 0 5rem;
+}
+.fitphoto3 {
+	display: flex;
+	justify-content: space-between;
+	margin: 4rem 5rem 0 5rem;
+}
+.advantage {
+	display: flex;
+	justify-content: center;
+}
 
 
 
@@ -260,7 +278,7 @@ footer h4{
     left: 50%;  
     margin-left: 60rem;
     z-index:99991;
-    }
+}
 #back-top a{
     display:block;
     text-decoration:none;
@@ -270,7 +288,7 @@ footer h4{
     -o-transition: all linear 0.2s;
     transition: all linear 0.2s;
     text-align: center;
-    }
+}
  
 #back-top a:hover{
     height: 5rem;
@@ -278,4 +296,5 @@ footer h4{
     -moz-transition: all linear 0.2s;
     -ms-transition: all linear 0.2s;
     -o-transition: all linear 0.2s;
-    transition: all linear 0.2s;    }
+    transition: all linear 0.2s;
+}

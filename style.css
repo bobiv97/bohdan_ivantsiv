@@ -298,3 +298,214 @@ footer h4{
     -o-transition: all linear 0.2s;
     transition: all linear 0.2s;
 }
+
+
+
+
+#user {
+	width: 47rem;
+	height: 2.3rem;
+	margin-bottom: 1rem;
+}
+#check {
+	width: 2.5rem;
+	height: 2.5rem;
+	margin-right: 1rem;
+}
+#log {
+	width: 15rem;
+	margin-left: 17rem;
+}
+
+div.login-center form, ul#list-login{
+	width: 27rem;
+	margin: 0 0;
+}
+div.login-center form{
+	margin-bottom: 2rem;
+}
+div.login-center form p{
+	margin-bottom: 2rem;
+	font-family: Tahoma;
+	font-size: 1.6rem;
+	color: #F8F8FF;
+}
+.user-name, .user-password, .user-firstname, .user-lastname,
+.user-gmail, .user-date{
+	border: 0.1rem solid;
+}
+.user-button{
+	border: 0.1rem solid #b8b8b8;
+}
+ul#list-login{
+	list-style-type: none;
+}
+ul#list-login li{
+	height: 1rem;
+	margin-bottom: 0.5rem;
+	padding-top: 1rem;
+	margin-left: -4rem;
+}
+ul#list-login li a{
+	text-decoration: none;
+	color: #000;
+	font-family: Tahoma;
+	font-weight: bold;
+	font-size: 1.2rem;
+	color: #F8F8FF;
+}
+
+
+
+
+/* Базовые стили слоя затемнения и модального окна  */
+.overlay {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+/* фон затемнения */
+    background-color: rgba(0, 0, 0, 0.65);
+    position: fixed; /* фиксированное поцизионирование */
+    cursor: default; /* тип курсора */
+}
+/* активируем слой затемнения */
+.overlay:target {
+    display: block;
+}
+/* стили модального окна */
+.popup {
+    top: -100%;
+    right: 0;
+    left: 50%;
+    font-size: 1.4rem;
+    z-index: 20;
+    margin: 0;
+    margin-top: -2rem;
+    width: 85%;
+    min-width: 32rem;
+    max-width: 50rem;
+/* фиксированное позиционирование, окно стабильно при прокрутке */
+    position: fixed;
+    padding: 1.5rem;
+    border: 0.1rem solid #383838;
+    background: #000;
+    	opacity: 0.9;
+	filter: alpha(Opacity=90);
+/* скругление углов */
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    border-radius: 0.4rem;
+    font: 1.4rem/1.8rem 'Tahoma', Arial, sans-serif;
+/* внешняя тень */
+    -webkit-box-shadow: 0 1.5rem 2rem rgba(0,0,0,.22),0 1.9rem 6rem rgba(0,0,0,.3);
+    -moz-box-shadow: 0 1.5rem 2rem rgba(0,0,0,.22),0 1.9rem 6rem rgba(0,0,0,.3);
+    -ms-box-shadow: 0 1.5rem 2rem rgba(0,0,0,.22),0 1.9rem 6rem rgba(0,0,0,.3);
+    box-shadow: 0 1.5rem 2rem rgba(0,0,0,.22),0 1.9rem 6rem rgba(0,0,0,.3);
+    -webkit-transform: translate(-50%, -500%);
+    -ms-transform: translate(-50%, -500%);
+    -o-transform: translate(-50%, -500%);
+    transform: translate(-50%, -500%);
+    -webkit-transition: -webkit-transform 0.6s ease-out;
+    -moz-transition: -moz-transform 0.6s ease-out;
+    -o-transition: -o-transform 0.6s ease-out;
+    transition: transform 0.6s ease-out;
+}
+/* активируем модальный блок */
+.overlay:target+.popup {
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    top: 20%;
+}
+/* формируем кнопку закрытия */
+.close {
+    top: -1rem;
+    right: -1rem;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    padding: 0;
+    border: 0.2rem solid #ccc;
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
+    -ms-border-radius: 1.5rem;
+    -o-border-radius: 1.5rem;
+    border-radius: 1.5rem;
+    background-color: rgba(61, 61, 61, 0.8);
+    -webkit-box-shadow: 0rem 0rem 1rem #000;
+    -moz-box-shadow: 0rem 0rem 1rem #000;
+    box-shadow: 0rem 0rem 1rem #000;
+    text-align: center;
+    text-decoration: none;
+    font: 1.3rem/2rem 'Tahoma', Arial, sans-serif;
+    font-weight: bold;
+    -webkit-transition: all ease .8s;
+    -moz-transition: all ease .8s;
+    -ms-transition: all ease .8s;
+    -o-transition: all ease .8s;
+    transition: all ease .8s;
+}
+.close:before {
+    color: rgba(255, 255, 255, 0.9);
+    content: "X";
+    text-shadow: 0 -0.1rem rgba(0, 0, 0, 0.9);
+    font-size: 1.2rem;
+}
+.close:hover {
+    background-color: rgba(252, 20, 0, 0.8);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);    
+}
+/* изображения внутри окна */
+.popup img {
+    width: 100%;
+    height: auto;
+}
+/* миниатюры слева/справа */
+.pic-left, 
+.pic-right {
+    width: 25%;
+    height: auto;
+}
+.pic-left {
+    float: left;
+    margin: 0.5rem 1.5rem 0.5rem 0;
+}
+.pic-right {
+    float: right;
+    margin: 0.5rem 0 0.5rem 1.5rem;
+}
+/* элементы м-медиа, фреймы */
+.popup embed, 
+.popup iframe {
+    top: 0;
+    right: 0;
+    bottom: 0; 
+    left: 0; 
+    display:block;
+    margin: auto;
+    min-width: 32rem;
+    max-width: 60rem;
+    width: 100%;
+}
+.popup h2 { /* заголовок 2 */
+    margin: 0;
+    color: #008000;
+    padding: 0.5rem 0rem 1rem;
+    text-align: left;
+    text-shadow: 0.1rem 0.1rem 0.3rem #adadad;
+    font-weight: 500;
+    font-size: 1.4em;
+    font-family: 'Tahoma', Arial, sans-serif;
+    line-height: 1.3;
+}
+/* параграфы */
+.popup p {margin: 0; padding: 0.5rem 0}
